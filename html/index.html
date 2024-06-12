@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/all.css">
 </head>
 <body>
     
@@ -18,12 +19,37 @@
             <li id="Nav_login" ><a href="login.html">login</a></li>
             <li id="Nav_register" > <a href="register.html">register</a></li>
             <li id="Name">name</li>
+            <li><div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="counter">1</div>
+            </div></li>
             <li id="Nav_logout">logout</li>
         </ul>
         </div>
     </header>
     <main>
-        <h1>home </h1>
+        <!-- <h1>home </h1> -->
+
+        <div class="product">
+            <div class="image">
+                <img src="/matrial/pexels-iurii-laimin-78973777-9555099.jpg" width="200" alt="">
+            </div>
+            <div class="description">
+                <h4>name</h4>
+                <p>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti voluptatum tenetur autem, eius adipisci est? </p>
+                <label for="">price</label>
+            </div>
+            <div class="inputs">
+                <i class="fa-regular fa-heart heart" id="heart"></i>
+                <!-- <i class="fa-solid fa-heart"></i> -->
+                <input type="button" value="add to car" class="btn_addToCar" id="btn_addToCar"> 
+            </div>
+        </div>
+
+
+
+
+
     </main>
 
 <script src="/java script/index.js"></script>

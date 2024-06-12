@@ -12,7 +12,7 @@ window.addEventListener("load",function(event){
     Nav_register.style.display="none"
     // Name.style.display="block"
     event.preventDefault();
-    Name.innerHTML=`Welcome ${localStorage.getItem("Username")}`
+    Name.innerHTML=`${localStorage.getItem("Username")}`
 
 
 })
