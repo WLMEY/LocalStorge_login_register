@@ -2,7 +2,7 @@ const Name = document.getElementById("Name")
 const Nav_register = document.getElementById("Nav_register")
 const Nav_login = document.getElementById("Nav_login")
 const Nav_logout = document.getElementById("Nav_logout")
-
+// import  Registration_status  from './login.js';
 const products = [
     {
         name: "iphone 1",
@@ -43,12 +43,12 @@ products.map(value => {
             <div class="description">
                 <h4>${value.name}</h4>
                 <p>${value.discrption}</p>
-                <label>${value.price}</label>
+                <label>price:  ${value.price}</label>
             </div>
             <div class="inputs">
                 <i class="fa-regular fa-heart heart" id="heart"></i>
                 <!-- <i class="fa-solid fa-heart"></i> -->
-                <input type="button" value="add to cart" class="btn_addToCar" id="btn_addToCar">
+                <input type="button" value="add to cart" onclick="addToCar(${value.id})" class="btn_addToCar" id="btn_addToCar">
             </div>
         </div>
     `;
@@ -68,8 +68,42 @@ cart.addEventListener("click",function(){
     }
 })
 
+const all_items=document.getElementById("all_items")
+
+function addToCar(ID){
+
+    const ID_target=products.find((item)=>item.id===ID)
+    all_items.innerHTML +=`     
+        <div class="item">
+            <div class="ditils">
+                <h5>${ID_target.name}</h5>
+                <h5>parice : ${ID_target.price}</h5>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-xmark X" id="item_remove"></i>
+            </div>
+        </div>
+        `
+}
+const item_remove=document.getElementById("item_remove")
+// item_remove.addEventListener("click",)
+
+    //  console.log(ID)
+    // if(Registration_status()==true){
+    //     console.log("login id :"+Registration_status() )    
+    // }
+            
 
 
+
+
+
+    //     }
+    // }
+    // else {
+    //     alert ("you need login frist .")
+    // }
+// }
 
 
 
@@ -108,10 +142,10 @@ Nav_logout.addEventListener("click", () => {
 
 
 
-function AddToCart(){
-    const  btn_addToCart= document.getElementById("btn_addToCart")
-    function find(){
+// function AddToCart(){
+//     const  btn_addToCart= document.getElementById("btn_addToCart")
+//     function find(){
         
-    }
+//     }
 
-}
+// }

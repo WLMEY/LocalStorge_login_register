@@ -6,18 +6,24 @@ const Form_inputs=document.getElementById("Form_inputs")
 
 Form_inputs.addEventListener("submit", function(event){
   event.preventDefault();
-  console.log("1")
+//   console.log("1")
     if(Email.value===localStorage.getItem("Email") && Password.value===localStorage.getItem("Password")){
         console.log("true  Email and passward")
         setTimeout(() => {
+            //  function Registration_status(){ return true}
             window.location="index.html";
         }, 1000);
 
     }
     else{
-        console.log("2")
+        // console.log("2")
 
         Save_btn.style.backgroundColor="red"
 
     }
 })
+
+
+
+
+// export default Registration_status()
