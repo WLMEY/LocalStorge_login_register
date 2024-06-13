@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,94 +8,83 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/all.css">
 </head>
+
 <body>
-    
-    <header class="flex" >
+
+    <header class="flex">
         <div class="logo">
-            
+
             <a href="index.html">logo</a>
         </div>
         <div class="links">
             <ul>
-            <li id="Nav_login" ><a href="login.html">login</a></li>
-            <li id="Nav_register" > <a href="register.html">register</a></li>
-            <li id="Name">name</li>
-            <li><div class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div class="counter">1</div>
-            </div></li>
-            <li id="Nav_logout">logout</li>
-        </ul>
+                <li id="Nav_login"><a href="login.html">login</a></li>
+                <li id="Nav_register"> <a href="register.html">register</a></li>
+                <li id="Name">name</li>
+                <li>
+                    <div class="cart" id="cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="counter">1</div>
+                    </div>
+                </li>
+                <li id="Nav_logout">logout</li>
+            </ul>
         </div>
-        <div class="cart_items">
+
+
+
+        <div class="cart_items" id="cart_items">
             <div class="header">
                 <h3>cart : numpers</h3>
                 <hr>
             </div>
             <div class="all_items">
-
-                
                 <div class="item">
                     <div class="ditils">
                         <h5>name</h5>
                         <h5>parice</h5>
                     </div>
                     <div class="icons">
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark X"></i>
                     </div>
 
 
-                    <div class="item">
+                    <!-- <div class="item">
                         <div class="ditils">
                             <h5>name</h5>
                             <h5>parice</h5>
                         </div>
                         <div class="icons">
                             <i class="fa-solid fa-xmark"></i>
-                        </div>
+                        </div> -->
 
 
 
 
 
+                    </div>
                 </div>
-            </div>
-            <div class="end">
-                <div class="all_price">
-                    <h5>price:1994$</h5>
-                    <input type="button" value="py">
+                <div class="end">
+                    
+                        <h5>price:1994$</h5>
+                        <input type="button" class="btn_buy" value="buy">
+                    
                 </div>
+
+
+
             </div>
-
-
-            
-        </div>
     </header>
-    <main>
+    <main id="main">
         <!-- <h1>home </h1> -->
 
-        <div class="product">
-            <div class="image">
-                <img src="/matrial/pexels-iurii-laimin-78973777-9555099.jpg" width="200" alt="">
-            </div>
-            <div class="description">
-                <h4>name</h4>
-                <p>  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti voluptatum tenetur autem, eius adipisci est? </p>
-                <label for="">price</label>
-            </div>
-            <div class="inputs">
-                <i class="fa-regular fa-heart heart" id="heart"></i>
-                <!-- <i class="fa-solid fa-heart"></i> -->
-                <input type="button" value="add to car" class="btn_addToCar" id="btn_addToCar"> 
-            </div>
-        </div>
-
-
-
-
+        
 
     </main>
 
-<script src="/java script/index.js"></script>
+    <script src="/java script/index.js"></script>
 </body>
+
 </html>
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquid omnis, culpa facere asperiores delectus.
