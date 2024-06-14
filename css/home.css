@@ -42,6 +42,8 @@ header .links ul {
 .cart{
     position: relative;
     font-size: 45px;
+    cursor: pointer;
+
 }
 
 .cart_items{
@@ -111,7 +113,11 @@ header .links ul {
     cursor: pointer;
     font-size: 25px;
 
-
+    transition: all 0.3s;
+}
+.btn_buy:hover{
+    background-color: green;
+    font-size: 30px;
 }
 .X:hover{
     cursor: pointer;
@@ -127,6 +133,7 @@ header .links ul {
 
 
 .counter{
+    /* display: block; */
     position: absolute;
     background-color: red;
     width: 45px;
@@ -138,6 +145,8 @@ header .links ul {
     text-align: center;
     font-size: 25px;
     padding-top: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
 

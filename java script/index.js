@@ -69,29 +69,90 @@ cart.addEventListener("click",function(){
 })
 
 const all_items=document.getElementById("all_items")
+const Crat=[]
+
+if(Crat.length===0){
+    counter.style.display="none"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const item_remove=document.getElementById("item_remove")
+function Remove(Id){
+   const index_of= Crat.findIndex((item)=>item.id===Id)
+   Crat.splice(index_of,1)
+    console.log(Crat)
+
+}
+
+
 
 function addToCar(ID){
 
+
     const ID_target=products.find((item)=>item.id===ID)
-    all_items.innerHTML +=`     
+    Crat.push(ID_target)
+    all_items.innerHTML='';
+    console.log(Crat)
+    Crat.forEach((item)=>{
+        all_items.innerHTML +=`     
         <div class="item">
             <div class="ditils">
-                <h5>${ID_target.name}</h5>
-                <h5>parice : ${ID_target.price}</h5>
+                <h5>${item.name}</h5>
+                <h5>parice : ${item.price}</h5>
             </div>
             <div class="icons">
-                <i class="fa-solid fa-xmark X" id="item_remove"></i>
+                <i class="fa-solid fa-xmark X" onclick="Remove(${item.id})" id="item_remove"></i>
             </div>
         </div>
         `
-}
-const item_remove=document.getElementById("item_remove")
-// item_remove.addEventListener("click",)
+    const counter=document.getElementById("counter")
+    if (Crat.length>99){
+        counter.innerHTML="99+"
 
-    //  console.log(ID)
-    // if(Registration_status()==true){
-    //     console.log("login id :"+Registration_status() )    
-    // }
+    }
+    counter.innerHTML=Crat.length
+    if(Crat.length!=0){
+        counter.style.display="block"
+    }
+    else{
+        counter.style.display="none"
+
+    }
+
+    })
+
+}
+
+
+
+
+
+
             
 
 
